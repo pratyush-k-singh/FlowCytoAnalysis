@@ -7,3 +7,9 @@
 05/07/2024:
 - Implemented the clustering of samples based on PCA dimensionality reduction of samples
 - Modified data analysis too analyize clusters of samples, merging the data together before completing the analysis process
+
+Order of file usage for large scale data analysis:
+- Data_Converter.py
+- Time_Normalizer.py
+- Sample_Clusterer.py
+- Cytometry_Analysis.py
