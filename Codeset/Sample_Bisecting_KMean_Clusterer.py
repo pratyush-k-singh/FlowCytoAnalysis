@@ -6,6 +6,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import pairwise_distances_argmin_min
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.pyplot as plt
+from scipy.stats import skew
 
 def load_data(file_path):
     """
@@ -34,8 +35,8 @@ def extract_features(data):
         column_data = data[column].dropna()
         mean = column_data.mean()
         std = column_data.std()
-        peaks = np.sum((column_data.shift(1) < column_data) & (column_data.shift(-1) < column_data))
-        features.extend([mean, std, peaks])
+        skewness = skew(column_data)  # Calculate skewness instead of peaks
+        features.extend([mean, std, skewness])
     return np.array(features)
 
 def bisecting_kmeans(data, n_clusters):
@@ -152,5 +153,5 @@ if __name__ == "__main__":
     os.environ['OMP_NUM_THREADS'] = '1'
     input_folder_path = r'C:\Users\praty\Downloads\Research\NormalizedCytometryFiles'
     output_folder_path = r'C:\Users\praty\Downloads\Research\ClusteredKMeanSamples'
-    n_clusters = 5 # Adjust the number of clusters as needed
+    n_clusters = 5  # Adjust the number of clusters as needed
     main(input_folder_path, output_folder_path, n_clusters)
