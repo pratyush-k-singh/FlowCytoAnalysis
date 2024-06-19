@@ -20,3 +20,11 @@ Order of file usage for large scale data analysis:
 05/20/2024:
 - Completed initial implementation of Isolated Forest Model design outlined above; testing pending
 - Fixed issues with the analysis of the clustered data caused by poor logic when merging the data in each cluster
+
+06/15/2024:
+- Implemented the use of bisecting k-mean clustering into the code
+- Implemented code visualization scripts to determine efficacy of potential clustering algorithms
+
+06/19/2024:
+- Implemented heatmap visualization of the mean, median, and skew of flow cytometry data
+- Implemented rudimentary anomaly detection within flow cytometry files to the 2.0, 2.5, and 3.0 standard deviations degrees
