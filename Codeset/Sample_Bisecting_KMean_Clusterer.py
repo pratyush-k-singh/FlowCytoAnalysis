@@ -151,7 +151,7 @@ def main(input_folder_path, output_folder_path, n_clusters):
 
 if __name__ == "__main__":
     os.environ['OMP_NUM_THREADS'] = '1'
-    input_folder_path = r'C:\Users\praty\Downloads\Research\NormalizedCytometryFiles'
-    output_folder_path = r'C:\Users\praty\Downloads\Research\ClusteredKMeanSamples'
+    input_folder_path = r'C:\Users\praty\cytoflow\Codeset\NormalizedCytometryFiles'
+    output_folder_path = r'C:\Users\praty\cytoflow\Codeset\ClusteredKMeanSamplesSkewBased'
     n_clusters = 5  # Adjust the number of clusters as needed
     main(input_folder_path, output_folder_path, n_clusters)

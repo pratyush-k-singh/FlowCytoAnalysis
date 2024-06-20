@@ -155,7 +155,7 @@ def main(input_folder_path, output_folder_path, n_clusters):
             plt.close()
 
 if __name__ == "__main__":
-    input_folder_path = r'C:\Users\praty\Downloads\Research\NormalizedCytometryFiles'
-    output_folder_path = r'C:\Users\praty\Downloads\Research\ClusteredAgglomerativeSamples'
+    input_folder_path = r'C:\Users\praty\cytoflow\Codeset\NormalizedCytometryFiles'
+    output_folder_path = r'C:\Users\praty\cytoflow\Codeset\ClusteredAgglomerativeSamples'
     n_clusters = 4  # Adjust the number of clusters as needed
     main(input_folder_path, output_folder_path, n_clusters)

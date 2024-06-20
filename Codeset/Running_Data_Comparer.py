@@ -26,13 +26,17 @@ def calculate_running_statistics(dfs, time_column='Time', method='mean'):
 
 def plot_columns(dfs, pdf_path, method, time_column='Time', exclude_points=100):
     columns = dfs[0].columns.difference([time_column])
-    
+    subdir_colors = {}
+
     with PdfPages(pdf_path) as pdf_pages:
         for column in columns:
             plt.figure(figsize=(10, 6))
             for i, df in enumerate(dfs):
                 subdir_name = os.path.basename(os.path.dirname(df.attrs['file_path']))
-                plt.plot(df[time_column][exclude_points:], df[column][exclude_points:], label=f'{subdir_name} File {i+1}')
+                if subdir_name not in subdir_colors:
+                    subdir_colors[subdir_name] = plt.get_cmap('tab10')(len(subdir_colors) % 10)
+                plt.plot(df[time_column][exclude_points:], df[column][exclude_points:], 
+                         label=f'{subdir_name} File {i+1}', color=subdir_colors[subdir_name])
             plt.title(f'Comparison of {method.capitalize()} {column}')
             plt.xlabel('Time')
             plt.ylabel(column)
@@ -69,10 +73,6 @@ def process_directory(directory, pdf_base_path):
             print(f'Overall PDF ({method.capitalize()}) saved to {pdf_path}')
 
 if __name__ == "__main__":
-    directory = r'C:\Users\praty\Downloads\Research\ClusteredKMeanSamples'
-    pdf_base_path = directory
-    process_directory(directory, pdf_base_path)
-    
-    directory = r'C:\Users\praty\Downloads\Research\ClusteredAgglomerativeSamples'
+    directory = r'C:\Users\praty\cytoflow\Codeset\ClusteredKMeanSamplesSkewBased'
     pdf_base_path = directory
     process_directory(directory, pdf_base_path)
