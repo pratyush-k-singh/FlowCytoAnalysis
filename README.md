@@ -15,7 +15,7 @@ Order of file usage for large scale data analysis:
 - Cytometry_Analysis.py
 
 05/12/2024:
-- Began implementation of new Isolated Forest Model design, meant to operate by clustering the initial training data, and then matchin inputted data to one of the resulting clusters based on a distance matrix. Then, the file will be fed into a model built of that clustered data _only_. Resultingly, there will be one model for each cluster.
+- Began implementation of new Isolated Forest Model design, meant to operate by clustering the initial training data, and then matching inputted data to one of the resulting clusters based on a distance matrix. Then, the file will be fed into a model built of that clustered data _only_. Resultingly, there will be one model for each cluster.
 
 05/20/2024:
 - Completed initial implementation of Isolated Forest Model design outlined above; testing pending
