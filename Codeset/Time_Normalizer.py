@@ -47,7 +47,7 @@ def process_folder(input_folder_path, output_folder_path):
             normalized_data.to_csv(output_file_path, index=False)
             print(f"Saved normalized file: {output_file_path}")
 
-    print("Processing complete.")
+    print("Process complete.")
 
 # Example usage
 input_folder_path = r'C:\Users\praty\Downloads\Research\CSVCytometryFiles'
