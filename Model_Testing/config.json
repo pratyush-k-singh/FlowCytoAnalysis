@@ -1,0 +1,23 @@
+{
+    "visualization": {
+      "grid_size": 50,
+      "chunk_size": 10000,
+      "plot_settings": {
+        "title_fontsize": 14,
+        "title_fontweight": "bold",
+        "cmap": "viridis",
+        "gridsize": 40,
+        "scatter": {
+          "colorbar_label": "Intensity"
+        },
+        "hexbin": {
+          "colorbar_label": "Density"
+        },
+        "kde": {
+          "colorbar_label": "Density",
+          "fontsize": 12,
+          "fontweight": "bold"
+        }
+      }
+    }
+}
