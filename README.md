@@ -1,7 +1,7 @@
-# Flow Cytometric Data Analysis Repository
+# Irregular Data Analysis Repository
 
 ## Overview
-This repository contains comprehensive data analysis for flow cytometric data, along with various test models developed throughout the project. Due to security concerns, the final models and sensitive genetic data have been excluded from this repository.
+This repository contains comprehensive data analysis for various forms of irregular data, along with various test models developed throughout the project. Due to security concerns, the final models and sensitive genetic and astronomical data have been excluded from this repository.
 
 ## Repository Contents
 
